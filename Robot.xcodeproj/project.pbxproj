@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C094CF8C1E5CF94D00D34E2F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C094CF8B1E5CF94D00D34E2F /* main.cpp */; };
+		C094CF971E5CF9A200D34E2F /* cAxes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C094CF921E5CF9A200D34E2F /* cAxes.cpp */; };
+		C094CF981E5CF9A200D34E2F /* cCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C094CF931E5CF9A200D34E2F /* cCube.cpp */; };
+		C094CF991E5CF9A200D34E2F /* cCylinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C094CF941E5CF9A200D34E2F /* cCylinder.cpp */; };
+		C094CF9A1E5CF9A200D34E2F /* cDroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C094CF951E5CF9A200D34E2F /* cDroid.cpp */; };
+		C094CF9B1E5CF9A200D34E2F /* cSphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C094CF961E5CF9A200D34E2F /* cSphere.cpp */; };
+		C094CFA61E5CF9E200D34E2F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C094CFA31E5CF9E200D34E2F /* GLKit.framework */; };
+		C094CFA71E5CF9E200D34E2F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C094CFA41E5CF9E200D34E2F /* GLUT.framework */; };
+		C094CFA81E5CF9E200D34E2F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C094CFA51E5CF9E200D34E2F /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,19 @@
 /* Begin PBXFileReference section */
 		C094CF881E5CF94D00D34E2F /* Robot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Robot; sourceTree = BUILT_PRODUCTS_DIR; };
 		C094CF8B1E5CF94D00D34E2F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C094CF921E5CF9A200D34E2F /* cAxes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cAxes.cpp; sourceTree = "<group>"; };
+		C094CF931E5CF9A200D34E2F /* cCube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cCube.cpp; sourceTree = "<group>"; };
+		C094CF941E5CF9A200D34E2F /* cCylinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cCylinder.cpp; sourceTree = "<group>"; };
+		C094CF951E5CF9A200D34E2F /* cDroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cDroid.cpp; sourceTree = "<group>"; };
+		C094CF961E5CF9A200D34E2F /* cSphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cSphere.cpp; sourceTree = "<group>"; };
+		C094CF9D1E5CF9C000D34E2F /* cAxes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cAxes.h; sourceTree = "<group>"; };
+		C094CF9E1E5CF9C000D34E2F /* cCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cCube.h; sourceTree = "<group>"; };
+		C094CF9F1E5CF9C000D34E2F /* cCylinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cCylinder.h; sourceTree = "<group>"; };
+		C094CFA01E5CF9C000D34E2F /* cDroid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cDroid.h; sourceTree = "<group>"; };
+		C094CFA11E5CF9C000D34E2F /* cSphere.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cSphere.h; sourceTree = "<group>"; };
+		C094CFA31E5CF9E200D34E2F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C094CFA41E5CF9E200D34E2F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		C094CFA51E5CF9E200D34E2F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C094CFA61E5CF9E200D34E2F /* GLKit.framework in Frameworks */,
+				C094CFA71E5CF9E200D34E2F /* GLUT.framework in Frameworks */,
+				C094CFA81E5CF9E200D34E2F /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +65,10 @@
 		C094CF7F1E5CF94D00D34E2F = {
 			isa = PBXGroup;
 			children = (
+				C094CF9C1E5CF9B400D34E2F /* Header */,
 				C094CF8A1E5CF94D00D34E2F /* Robot */,
 				C094CF891E5CF94D00D34E2F /* Products */,
+				C094CFA21E5CF9E200D34E2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +83,36 @@
 		C094CF8A1E5CF94D00D34E2F /* Robot */ = {
 			isa = PBXGroup;
 			children = (
+				C094CF921E5CF9A200D34E2F /* cAxes.cpp */,
+				C094CF931E5CF9A200D34E2F /* cCube.cpp */,
+				C094CF941E5CF9A200D34E2F /* cCylinder.cpp */,
+				C094CF951E5CF9A200D34E2F /* cDroid.cpp */,
+				C094CF961E5CF9A200D34E2F /* cSphere.cpp */,
 				C094CF8B1E5CF94D00D34E2F /* main.cpp */,
 			);
 			path = Robot;
+			sourceTree = "<group>";
+		};
+		C094CF9C1E5CF9B400D34E2F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				C094CF9D1E5CF9C000D34E2F /* cAxes.h */,
+				C094CF9E1E5CF9C000D34E2F /* cCube.h */,
+				C094CF9F1E5CF9C000D34E2F /* cCylinder.h */,
+				C094CFA01E5CF9C000D34E2F /* cDroid.h */,
+				C094CFA11E5CF9C000D34E2F /* cSphere.h */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		C094CFA21E5CF9E200D34E2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C094CFA31E5CF9E200D34E2F /* GLKit.framework */,
+				C094CFA41E5CF9E200D34E2F /* GLUT.framework */,
+				C094CFA51E5CF9E200D34E2F /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C094CF971E5CF9A200D34E2F /* cAxes.cpp in Sources */,
+				C094CF981E5CF9A200D34E2F /* cCube.cpp in Sources */,
+				C094CF9B1E5CF9A200D34E2F /* cSphere.cpp in Sources */,
 				C094CF8C1E5CF94D00D34E2F /* main.cpp in Sources */,
+				C094CF9A1E5CF9A200D34E2F /* cDroid.cpp in Sources */,
+				C094CF991E5CF9A200D34E2F /* cCylinder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
