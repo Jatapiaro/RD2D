@@ -11,11 +11,13 @@
 #include <GLUT/glut.h>
 #include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #else
 #include "freeglut.h"
 #include <time.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 #endif
 
@@ -25,7 +27,26 @@
 
 Axes* axes;
 Droid* droid;
+int window;
 // TO-DO: Declare robot:
+
+
+void processMenu(int val){
+    /*
+     *To stop execution quickly
+     */
+    if(val == 666){
+        glutDestroyWindow(window);
+        exit(0);
+    }
+}
+
+void createMenu(){
+    int menu;
+    menu = glutCreateMenu(processMenu);
+    glutAddMenuEntry("Exit", 666);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
 
 
 void init()
@@ -69,7 +90,7 @@ void reshape(int x, int y)											// Called when the window geometry changes.
     gluPerspective(40.0, (GLdouble)x / (GLdouble)y, 0.5, 20.0);		// Configure the camera lens aperture.
     glMatrixMode(GL_MODELVIEW);										// Go to 3D mode.
     glViewport(0, 0, x, y);											// Configure the camera frame dimensions.
-    gluLookAt(0.0, 1.0, 3.0,
+    gluLookAt(2.0, 1.0, 3.0,
               0.0, 0.0, 0.0,
               0.0, 1.0, 0.0);
     display();
@@ -81,8 +102,8 @@ int main(int argc, char* argv[])
     glutInit(&argc, argv);											// Init GLUT with command line parameters.
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGB);		// Use 2 buffers (hidden and visible). Use the depth buffer. Use 3 color channels.
     glutInitWindowSize(800, 800);
-    glutCreateWindow(argv[0]);
-    
+    window = glutCreateWindow(argv[0]);
+    createMenu();
     init();
     glutReshapeFunc(reshape);										// Reshape CALLBACK function.
     glutDisplayFunc(display);										// Display CALLBACK function.

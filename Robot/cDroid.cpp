@@ -20,6 +20,9 @@ Droid::Droid()
     rightArm = new Cube(1.0f,0.8f,0.8f,0.8f);
     rightLittleArm = new Cube(1.0f,1.0f,1.0f,1.0f);
     
+    centerArm = new Cube(1.0f,0.8f,0.8f,0.8f);
+    centerLittleArm = new Cube(1.0f,0.8f,0.8f,0.8f);
+    
     headRotation = shoulderRotation = movementFloat = 0.0f;
     left = shoulder = movement = true;
 }
@@ -130,6 +133,39 @@ void Droid::draw(){
         
         /*
          * Right Arm
+         */
+        
+        
+        
+        
+        /*
+         * Center Arm
+         */
+        
+        glPushMatrix();
+        {
+            
+            glTranslatef(movementFloat/1.2, 0.1, 0.0);
+            
+            glRotatef(shoulderRotation,0.0, 0.0, 1.0f);
+            
+            glScalef(0.10, 0.10, 0.10);
+            
+            centerArm -> draw();
+            
+        }
+        glPopMatrix();
+        
+        glPushMatrix();
+        {
+            glTranslatef(movementFloat/1.2, 0.0, 0.0);
+            glScalef(0.20f, 0.10f, 0.15f);
+            centerLittleArm -> draw();
+        }
+        glPopMatrix();
+        
+        /*
+         * Center Arm
          */
         
     }
